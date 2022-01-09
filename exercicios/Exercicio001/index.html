@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>     
+    <label for="ddlCores">Selecione uma ou mais cores:</label><br>
+    <select id="ddlCores" multiple="multiple" size="3" style= "width:100px"> 
+        <option value="Azul">Azul</option> 
+        <option value="Amarelo">Amarelo</option> 
+        <option value="Verde">Verde</option> 
+        <option value="Rosa">Rosa</option> 
+        <option value="Branco">Branco</option> 
+    </select>  <br>   
+    <input type="button" id="btnExibir" value="Exibir itens selecionados" />
+    <h2 id="resultado"></h2>  
+    <script>
+        document.getElementById("btnExibir").onclick = function () {
+            let ddl = document.getElementById('ddlCores');
+            let itensSelecionados = Array.from(ddl.options)
+                    .filter(option => option.selected)
+                    .map(option => option.value);
+            document.getElementById("resultado").innerHTML = "Você selecionou: " + itensSelecionados;
+        };
+    </script>           
+</body>
+</html>

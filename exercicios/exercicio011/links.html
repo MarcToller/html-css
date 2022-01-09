@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        a {
+            color: red;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        /*pseudo classe para alterar uma propriedade de a, no caso os links já visitados*/
+        a:visited {
+            color: red;
+        }
+
+        /*pseudo classe para alterar uma propriedade de a, no caso quando passa o mous em cima:*/
+        a:hover {
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active {
+            color: blueviolet;
+        }
+
+        /*pseudo elementos: duas vezes os dois pontos*/
+        a::after {
+            content: ' [link]';
+            text-decoration: yellow;            
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando links</h1>
+    <ul>
+        <li><a href="https://www.terra.com.br/">Terra</a></li>
+        <li><a href="https://www.youtube.com/">Youtube</a></li>
+        <li><a href="https://twitter.com/home">Twitter</a></li>
+    </ul>    
+</body>
+</html>

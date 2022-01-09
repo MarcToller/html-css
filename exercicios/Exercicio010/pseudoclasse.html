@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        div {
+            display: inline-block;
+            background-color: lightslategray;
+            border: 1px solid black;
+            text-align: center;
+            width: 200px;
+            height: 200px;
+        }
+
+        /*pseudo classe: Influencia em algum atributo, neste caso no hover que é qdo pasa o mouse em cima e só vbai funcionar na 1 por causa do id, se tirar o #d1 funciona em todas as divs o # se coloca quando no html tiver um id*/
+        div#d1:hover {
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <div id="d1">01</div>
+    <div id="d2">02</div>
+    <div id="d3">03</div>
+    <h1><a href="hover.html">Exemplo de hover</a></h1>
+    
+    
+</body>
+</html>
