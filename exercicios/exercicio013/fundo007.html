@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Centralização Vertical</title>    
+     
+    <!--necessário ter um container e um conteúdo para este tipo de centralização-->
+
+    <!--Comentário de um seguidor do canal Curo em vídeo: Outra coisa pra quem ainda não manja muito de position: é necessário usar o relative nesse caso, até porque o position: absolute é absoluto ao relative mais acima (pai), então se esse section não tivesse o filho estaria absoluto ao body-->
+    <style>
+        #container {
+            position: relative; /*o container tem que ser relative (default)*/            
+            background-image: url('imagens/target001.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            height: 95vh;            
+            padding: 10px;
+            background-color: blueviolet;
+        }
+
+        #conteudo {
+            position: absolute; /*o conteúdo precisa ter um posicionamento absulto!*/
+            height: 200px;
+            width: 400px;
+            background-color: yellow;
+            background-image: url('imagens/target001.png');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+
+            /*propriedades podes ser usadas quando o position é absolute*/
+            left: 50%;
+            top: 50%;
+
+            /*esse é o pulo do gato. Translate "transforma" no caso o posicionamento, tras 50% para a esquerda e 50% para cima por causa dos negativos*/
+            transform: translate(-50%, -50%);
+        }
+    </style>
+   
+</head>
+<body>
+    <section id="container"> 
+        <article id="conteudo">
+
+        </article>
+    </section>
+    
+</body>
+</html>
